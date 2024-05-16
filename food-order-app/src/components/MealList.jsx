@@ -1,15 +1,23 @@
 import { useState, useEffect } from "react";
-import Meal from "./Meal";
+
+import Meal from "./Meal.jsx";
 
 export default function MealList() {
   const [loadedMeals, setLoadedMeals] = useState([]);
+
   useEffect(() => {
-    async function fetchData() {
+    async function fetchMeals() {
       const response = await fetch("http://localhost:3000/meals");
+
+      if (!response.ok) {
+        // ...
+      }
+
       const meals = await response.json();
       setLoadedMeals(meals);
     }
-    fetchData();
+
+    fetchMeals();
   }, []);
 
   return (

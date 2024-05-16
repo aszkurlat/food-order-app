@@ -1,18 +1,20 @@
-import { currencyFormatter } from "../util/formatting";
-import Button from "./ui-components/Button";
-import CartContext from "../store/CartContext.jsx";
 import { useContext } from "react";
 
-export default function Meal({ meal }) {
+import { currencyFormatter } from "../util/formatting.js";
+import Button from "./ui-components/Button.jsx";
+import CartContext from "../store/CartContext.jsx";
+
+export default function MealItem({ meal }) {
   const cartCtx = useContext(CartContext);
 
   function handleAddMealToCart() {
     cartCtx.addItem(meal);
   }
+
   return (
-    <li className="meal" key={meal.id}>
+    <li className="meal">
       <article>
-        <img src={meal.image} alt={meal.name} />
+        <img src={`http://localhost:3000/${meal.image}`} alt={meal.name} />
         <div>
           <h3>{meal.name}</h3>
           <p className="meal-price">{currencyFormatter.format(meal.price)}</p>
