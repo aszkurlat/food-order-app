@@ -1,4 +1,5 @@
 import logo from "../assets/logo.jpg";
+import Button from "./ui-components/Button";
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
         <h1>Food Order App</h1>
       </div>
       <nav>
-        <button>Cart (0)</button>
+        <Button text>Cart (0)</Button>
       </nav>
     </header>
   );
