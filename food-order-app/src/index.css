@@ -9,7 +9,7 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#5c5c3b, #000000);
+  background: linear-gradient(#29251c, #2c2306);
   color: #d9e2f1;
   min-height: 100vh;
 }
@@ -96,7 +96,7 @@ h1 {
   display: inline-block;
   background-color: #312c1d;
   color: #ffc404;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 0.5rem 2rem;
   margin: 0;
@@ -247,6 +247,28 @@ h1 {
 
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.55);
+}
+
+.center {
+  text-align: center;
+}
+
+.error {
+  width: 90%;
+  max-width: 25rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9b8b8;
+  color: #6d0b0b;
+  border-radius: 6px;
+}
+
+.error h2 {
+  margin: 0;
+}
+
+.error p {
+  margin: 0;
 }
 
 @keyframes fade-slide-up {
