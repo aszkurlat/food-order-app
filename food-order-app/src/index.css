@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,7 +10,7 @@ body {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#29251c, #2c2306);
+  background: linear-gradient(#393426, #382d09);
   color: #d9e2f1;
   min-height: 100vh;
 }
@@ -28,11 +29,7 @@ body {
 }
 
 #main-header #title img {
-  width: 4rem;
-  height: 4rem;
-  object-fit: contain;
-  border-radius: 50%;
-  border: 2px solid #ffc404;
+  width: 7rem;
 }
 
 #main-header button {
@@ -41,13 +38,12 @@ body {
 }
 
 h1 {
-  font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.7rem;
   margin: 0;
   color: #ffc404;
   letter-spacing: 0.2rem;
-  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
 }
 
 #meals {
@@ -83,7 +79,7 @@ h1 {
 }
 
 .meal h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   margin: 0.75rem 0;
 }
@@ -96,7 +92,7 @@ h1 {
   display: inline-block;
   background-color: #312c1d;
   color: #ffc404;
-  font-size: 0.9rem;
+  font-size: 01.2rem;
   font-weight: bold;
   padding: 0.5rem 2rem;
   margin: 0;
@@ -106,7 +102,6 @@ h1 {
 .meal-actions {
   margin-bottom: 1.5rem;
 }
-
 .cart h2 {
   margin: 1rem 0;
 }
@@ -212,6 +207,7 @@ h1 {
   color: #1f1a09;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .button:hover,
@@ -233,7 +229,12 @@ h1 {
 .text-button:active {
   color: #ffab04;
 }
-
+.shopping-cart {
+  color: #ffc404;
+}
+.shopping-cart:hover {
+  color: #ffab04;
+}
 .modal {
   background-color: #e4ddd4;
   border-radius: 6px;

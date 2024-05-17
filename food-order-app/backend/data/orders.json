@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "items": [
+      {
+        "id": "m1",
+        "name": "Margherita Pizza",
+        "price": "12.99",
+        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+        "image": "images/margherita.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m3",
+        "name": "Pepperoni Pizza",
+        "price": "17.99",
+        "description": "A savory pizza with a thin and crispy crust, topped with tomato sauce, cheese, spicy pepperoni slices, and a sprinkle of oregano.",
+        "image": "images/pepperoni.jpg",
+        "quantity": 1
+      },
+      {
+        "id": "m5",
+        "name": "Four Cheese Pizza",
+        "price": "18.50",
+        "description": "A rich pizza with a thin and crispy crust, topped with tomato sauce and a blend of four cheeses: mozzarella, gorgonzola, parmesan, and fontina.",
+        "image": "images/cheese.jpg",
+        "quantity": 2
+      }
+    ],
+    "customer": {
+      "name": "Agnieszka Szkurłat",
+      "email": "javalodzdev@gmail.com",
+      "street": "28A/4 Świętego Wawrzyńca",
+      "postal-code": "60-541",
+      "city": "Poznań"
+    },
+    "id": "271.2710618618748"
+  }
+]

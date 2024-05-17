@@ -1,142 +1,175 @@
 [
   {
     "id": "m1",
-    "name": "Mac & Cheese",
-    "price": "8.99",
-    "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
-    "image": "images/margherita-pizza.jpg"
-  },
-  {
-    "id": "m2",
     "name": "Margherita Pizza",
     "price": "12.99",
     "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
-    "image": "images/margherita-pizza.jpg"
+    "image": "images/margherita.jpg"
+  },
+  {
+    "id": "m2",
+    "name": "Capriciosa Pizza",
+    "price": "15.99",
+    "description": "A thin crust pizza topped with tomato sauce, cheese, ham, mushrooms, and oregano.",
+    "image": "images/capriciosa.jpg"
   },
   {
     "id": "m3",
-    "name": "Caesar Salad",
-    "price": "7.99",
-    "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Pepperoni Pizza",
+    "price": "17.99",
+    "description": "A savory pizza with a thin and crispy crust, topped with tomato sauce, cheese, spicy pepperoni slices, and a sprinkle of oregano.",
+    "image": "images/pepperoni.jpg"
   },
   {
     "id": "m4",
-    "name": "Spaghetti Carbonara",
-    "price": "10.99",
-    "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Hawaiian Pizza",
+    "price": "17.50",
+    "description": "A flavorful pizza with a thin and crispy crust, topped with tomato sauce, melted cheese, savory ham, and sweet pineapple chunks.",
+    "image": "images/hawai.jpg"
   },
   {
     "id": "m5",
-    "name": "Veggie Burger",
-    "price": "9.99",
-    "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Four Cheese Pizza",
+    "price": "18.50",
+    "description": "A rich pizza with a thin and crispy crust, topped with tomato sauce and a blend of four cheeses: mozzarella, gorgonzola, parmesan, and fontina.",
+    "image": "images/cheese.jpg"
   },
   {
     "id": "m6",
-    "name": "Grilled Chicken Sandwich",
-    "price": "10.99",
-    "description": "Tender grilled chicken breast with avocado, bacon, lettuce, and honey mustard on a toasted bun.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Garden Spice Pizza",
+    "price": "18.99",
+    "description": "Thin crust pizza with tomato sauce, mozzarella, yellow cheese, onions, tomatoes, olives, chili peppers, zucchini, and basil.",
+    "image": "images/spice.jpg"
   },
   {
     "id": "m7",
-    "name": "Steak Frites",
-    "price": "17.99",
-    "description": "Succulent steak cooked to your preference, served with crispy golden fries and herb butter.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Spaghetti Bolognese",
+    "price": "14.99",
+    "description": "Spaghetti served with a rich meat sauce made from ground beef, tomatoes, onions, and herbs.",
+    "image": "images/bolognese.png"
   },
   {
     "id": "m8",
-    "name": "Sushi Roll Platter",
+    "name": "Spaghetti Carbonara",
     "price": "15.99",
-    "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
-    "image": "images/margherita-pizza.jpg"
+    "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+    "image": "images/spaghetti.jpg"
   },
   {
     "id": "m9",
-    "name": "Chicken Curry",
-    "price": "13.99",
-    "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Lasagne al Forno",
+    "price": "16.79",
+    "description": "Layers of lasagna noodles, meaty ragu sauce, creamy béchamel sauce, and cheese, baked to perfection.",
+    "image": "images/lasagne.jpg"
   },
   {
     "id": "m10",
-    "name": "Vegan Buddha Bowl",
-    "price": "11.99",
-    "description": "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Fettuccine Alfredo",
+    "price": "16.99",
+    "description": "Wide ribbons of fettuccine pasta coated in a rich and creamy Alfredo sauce, made with butter, heavy cream, and plenty of grated Parmesan cheese.",
+    "image": "images/alfredo.jpg"
   },
+
   {
     "id": "m11",
-    "name": "Seafood Paella",
-    "price": "19.99",
-    "description": "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Classic Beefy Burger",
+    "price": "14.99",
+    "description": "Juicy beef patty topped with crispy bacon, melted cheese, fresh lettuce, tomato slices, pickles, and mayo in a sesame seed bun.",
+    "image": "images/burger.jpg"
   },
+
   {
     "id": "m12",
-    "name": "Pancake Stack",
-    "price": "8.99",
-    "description": "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Cheeseburger",
+    "price": "13.00",
+    "description": "A juicy beef patty grilled to perfection, topped with melted cheese, lettuce, ripe tomato slices, tangy pickles, all nestled between two soft sesame seed buns.",
+    "image": "images/cheeseburger.jpg"
   },
   {
     "id": "m13",
-    "name": "Miso Ramen",
-    "price": "12.99",
-    "description": "A warming bowl of ramen with miso broth, tender pork, soft-boiled egg, and green onions.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Spicy Fry Burger",
+    "price": "17.99",
+    "description": "A spicy beef burger stuffed with fries and topped with pulled beef, jalapeños, and hot sauce.",
+    "image": "images/burgerfries.jpg"
   },
+
   {
     "id": "m14",
-    "name": "Beef Tacos",
-    "price": "9.99",
-    "description": "Three soft tortillas filled with seasoned beef, fresh salsa, cheese, and sour cream.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Bacon and Egg Burger",
+    "price": "19.99",
+    "description": "A delicious combination of a juicy beef patty topped with crispy bacon, a fried egg, and served on a bun",
+    "image": "images/beconburger.jpg"
   },
   {
     "id": "m15",
-    "name": "Chocolate Brownie",
-    "price": "5.99",
-    "description": "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Seafood Paella",
+    "price": "19.99",
+    "description": "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, chorizo, and a medley of vibrant spices.",
+    "image": "images/seafood-paella.jpg"
   },
   {
     "id": "m16",
-    "name": "Lobster Bisque",
-    "price": "14.99",
-    "description": "A creamy soup made from lobster stock, aromatic vegetables, and a touch of brandy.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Mushroom Risotto",
+    "price": "17.99",
+    "description": "Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.",
+    "image": "images/mushroom-risotto.jpg"
   },
   {
     "id": "m17",
-    "name": "Mushroom Risotto",
-    "price": "13.99",
-    "description": "Creamy Arborio rice cooked with a medley of wild mushrooms and finished with parmesan.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Caesar Salad",
+    "price": "14.99",
+    "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+    "image": "images/caesar-salad.jpg"
   },
   {
     "id": "m18",
-    "name": "Eggplant Parmesan",
-    "price": "11.99",
-    "description": "Layers of breaded eggplant, marinara sauce, and melted mozzarella and parmesan cheeses.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Blue Cheese Salad",
+    "price": "16.99",
+    "description": "Crisp lettuce with tomatoes, nuts, and tangy blue cheese, dressed in balsamic vinaigrette.",
+    "image": "images/cheesesalad.jpg"
   },
   {
     "id": "m19",
-    "name": "Lemon Cheesecake",
-    "price": "6.99",
-    "description": "A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.",
-    "image": "images/margherita-pizza.jpg"
+    "name": "Vegan Buddha Bowl",
+    "price": "15.50",
+    "description": "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
+    "image": "images/vegan-buddha-bowl.jpg"
   },
   {
     "id": "m20",
     "name": "Falafel Wrap",
-    "price": "8.99",
+    "price": "14.50",
     "description": "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
-    "image": "images/margherita-pizza.jpg"
+    "image": "images/falafel-wrap.jpg"
+  },
+
+  {
+    "id": "m21",
+    "name": "Tiramisu",
+    "price": "9.99",
+    "description": "A decadent blend of espresso-infused ladyfingers, mascarpone, and cocoa dust for a luxurious Italian treat.",
+    "image": "images/tiramisu.jpg"
+  },
+
+  {
+    "id": "m22",
+    "name": "Lemon Cheesecake",
+    "price": "10.99",
+    "description": "A creamy cheesecake with a tangy lemon flavor, served on a crumbly biscuit base.",
+    "image": "images/lemon-cheesecake.jpg"
+  },
+  {
+    "id": "m23",
+    "name": "Chocolate Brownie",
+    "price": "11.99",
+    "description": "A rich and fudgy brownie, topped with a scoop of vanilla ice cream and chocolate sauce.",
+    "image": "images/brownie.jpg"
+  },
+  {
+    "id": "m24",
+    "name": "Apple Pie",
+    "price": "10.99",
+    "description": "Tender, spiced apples baked in a flaky crust, served warm with ice cream or whipped cream.",
+    "image": "images/apple-pie.jpg"
   }
 ]

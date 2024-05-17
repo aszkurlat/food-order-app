@@ -1,9 +1,9 @@
 import { useContext } from "react";
-
 import Button from "./ui-components/Button.jsx";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import CartContext from "../store/CartContext.jsx";
 import UserProgressContext from "../store/UserProgressContext.jsx";
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Header() {
   const cartCtx = useContext(CartContext);
@@ -24,8 +24,9 @@ export default function Header() {
         <h1>Food Order App</h1>
       </div>
       <nav>
-        <Button text onClick={handleShowCart}>
-          Cart ({totalCartItems})
+        <Button text className="shopping-cart" onClick={handleShowCart}>
+          <FaShoppingCart className="shopping-icon" />
+          <span> Cart ({totalCartItems})</span>
         </Button>
       </nav>
     </header>
