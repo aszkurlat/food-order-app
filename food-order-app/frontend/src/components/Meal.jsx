@@ -14,7 +14,10 @@ export default function MealItem({ meal }) {
   return (
     <li className="meal">
       <article>
-        <img src={`http://localhost:3000/${meal.image}`} alt={meal.name} />
+        <img
+          src={`http://food-order-app-frontend-eight.vercel.app/api/${meal.image}`}
+          alt={meal.name}
+        />
         <div>
           <h3>{meal.name}</h3>
           <p className="meal-price">{currencyFormatter.format(meal.price)}</p>
