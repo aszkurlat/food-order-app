@@ -1,10 +1,13 @@
-import fs from "node:fs/promises";
-import path from "path";
-import bodyParser from "body-parser";
+import mongoose from "mongoose";
 import express from "express";
+import bodyParser from "body-parser";
+import { Meal, Order } from "./model.js";
+import dotenv from "dotenv";
+import { body, validationResult } from "express-validator";
+
+dotenv.config();
 
 const app = express();
-const __dirname = path.resolve();
 
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -16,64 +19,78 @@ app.use((req, res, next) => {
   next();
 });
 
+mongoose
+  .connect(
+    `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
+
+process.on("SIGINT", async () => {
+  await mongoose.connection.close();
+  console.log("Disconnected from MongoDB");
+  process.exit(0);
+});
+
+// Endpoint GET /api/meals
 app.get("/api/meals", async (req, res) => {
   try {
-    // const mealsPath = path.join(__dirname, "/data/available-meals.json");
-    // const mealsPath = path.join(__dirname, "data", "available-meals.json");
-    const mealsPath = path.join(process.cwd(), "data", "available-meals.json");
-    const mealsData = await fs.readFile(mealsPath, "utf8");
-    const meals = JSON.parse(mealsData);
+    const meals = await Meal.find();
     res.json(meals);
   } catch (error) {
     console.error("Error reading meals data:", error);
     res.status(500).json({ message: "Could not read meals data." });
   }
 });
+// Endpoint GET /api/orders (optional)
+// app.get("/api/orders", async (req, res) => {
+//   try {
+//     const orders = await Order.find();
+//     res.json(orders);
+//   } catch (error) {
+//     console.error("Error reading orders data:", error);
+//     res.status(500).json({ message: "Could not read orders data." });
+//   }
+// });
 
-app.post("/api/orders", async (req, res) => {
-  const orderData = req.body.order;
+// Endpoint POST /api/orders
+app.post(
+  "/api/orders",
+  [
+    body("order.items").isArray().withMessage("Items must be an array"),
+    body("order.customer")
+      .isObject()
+      .withMessage("Customer data must be an object"),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
-  if (!orderData || !orderData.items || orderData.items.length === 0) {
-    return res.status(400).json({ message: "Missing data." });
+    const orderData = req.body.order;
+
+    if (!orderData || !orderData.items || orderData.items.length === 0) {
+      return res.status(400).json({ message: "Missing data." });
+    }
+
+    try {
+      const newOrder = await Order.create(orderData);
+      res.status(201).json({ message: "Order created!", order: newOrder });
+    } catch (error) {
+      console.error("Error saving order:", error);
+      res.status(500).json({ message: "Could not save the order." });
+    }
   }
-
-  if (
-    !orderData.customer.email ||
-    !orderData.customer.email.includes("@") ||
-    !orderData.customer.name ||
-    orderData.customer.name.trim() === "" ||
-    !orderData.customer.street ||
-    orderData.customer.street.trim() === "" ||
-    !orderData.customer["postal-code"] ||
-    orderData.customer["postal-code"].trim() === "" ||
-    !orderData.customer.city ||
-    orderData.customer.city.trim() === ""
-  ) {
-    return res.status(400).json({
-      message:
-        "Missing data: Email, name, street, postal code or city is missing.",
-    });
-  }
-
-  const newOrder = {
-    ...orderData,
-    id: (Math.random() * 1000).toString(),
-  };
-
-  try {
-    // const ordersPath = path.join(__dirname, "/data/orders.json");
-    // const ordersPath = path.join(__dirname, "data", "orders.json");
-    const ordersPath = path.join(process.cwd(), "data", "orders.json");
-    const ordersData = await fs.readFile(ordersPath, "utf8");
-    const allOrders = JSON.parse(ordersData);
-    allOrders.push(newOrder);
-    await fs.writeFile(ordersPath, JSON.stringify(allOrders));
-    res.status(201).json({ message: "Order created!" });
-  } catch (error) {
-    console.error("Error saving order:", error);
-    res.status(500).json({ message: "Could not save the order." });
-  }
-});
+);
 
 app.use((req, res) => {
   if (req.method === "OPTIONS") {
