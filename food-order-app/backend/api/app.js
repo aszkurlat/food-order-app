@@ -16,19 +16,19 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/meals", async (req, res) => {
+app.get("/api/meals", async (req, res) => {
   try {
-    const meals = await fs.readFile(
-      path.join(__dirname, "../data/available-meals.json"),
-      "utf8"
-    );
-    res.json(JSON.parse(meals));
+    const mealsPath = path.join(__dirname, "/data/available-meals.json");
+    const mealsData = await fs.readFile(mealsPath, "utf8");
+    const meals = JSON.parse(mealsData);
+    res.json(meals);
   } catch (error) {
+    console.error("Error reading meals data:", error);
     res.status(500).json({ message: "Could not read meals data." });
   }
 });
 
-app.post("/orders", async (req, res) => {
+app.post("/api/orders", async (req, res) => {
   const orderData = req.body.order;
 
   if (!orderData || !orderData.items || orderData.items.length === 0) {
@@ -59,18 +59,14 @@ app.post("/orders", async (req, res) => {
   };
 
   try {
-    const orders = await fs.readFile(
-      path.join(__dirname, "../data/orders.json"),
-      "utf8"
-    );
-    const allOrders = JSON.parse(orders);
+    const ordersPath = path.join(__dirname, "/data/orders.json");
+    const ordersData = await fs.readFile(ordersPath, "utf8");
+    const allOrders = JSON.parse(ordersData);
     allOrders.push(newOrder);
-    await fs.writeFile(
-      path.join(__dirname, "../data/orders.json"),
-      JSON.stringify(allOrders)
-    );
+    await fs.writeFile(ordersPath, JSON.stringify(allOrders));
     res.status(201).json({ message: "Order created!" });
   } catch (error) {
+    console.error("Error saving order:", error);
     res.status(500).json({ message: "Could not save the order." });
   }
 });

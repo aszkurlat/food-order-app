@@ -3,7 +3,7 @@
   "name": "node-js",
   "builds": [{ "src": "api/app.js", "use": "@vercel/node" }],
   "routes": [
-    { "src": "/meals", "dest": "/api/app.js" },
-    { "src": "/orders", "dest": "/api/app.js" }
+    { "src": "/api/meals", "dest": "/api/app.js" },
+    { "src": "/api/orders", "dest": "/api/app.js" }
   ]
 }
