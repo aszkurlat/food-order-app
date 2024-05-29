@@ -27,7 +27,8 @@ export default function Checkout() {
     sendRequest,
     clearData,
   } = useHttp(
-    "http://food-order-app-frontend-eight.vercel.app/api/orders",
+    // "http://food-order-app-frontend-eight.vercel.app/api/orders",
+    "http://localhost:3000/orders",
     requestConfig
   );
 
