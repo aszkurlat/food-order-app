@@ -19,7 +19,8 @@ app.use((req, res, next) => {
 app.get("/api/meals", async (req, res) => {
   try {
     // const mealsPath = path.join(__dirname, "/data/available-meals.json");
-    const mealsPath = path.join(__dirname, "data", "available-meals.json");
+    // const mealsPath = path.join(__dirname, "data", "available-meals.json");
+    const mealsPath = path.join(process.cwd(), "data", "available-meals.json");
     const mealsData = await fs.readFile(mealsPath, "utf8");
     const meals = JSON.parse(mealsData);
     res.json(meals);
@@ -61,7 +62,8 @@ app.post("/api/orders", async (req, res) => {
 
   try {
     // const ordersPath = path.join(__dirname, "/data/orders.json");
-    const ordersPath = path.join(__dirname, "data", "orders.json");
+    // const ordersPath = path.join(__dirname, "data", "orders.json");
+    const ordersPath = path.join(process.cwd(), "data", "orders.json");
     const ordersData = await fs.readFile(ordersPath, "utf8");
     const allOrders = JSON.parse(ordersData);
     allOrders.push(newOrder);
