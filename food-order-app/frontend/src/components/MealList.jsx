@@ -10,8 +10,8 @@ export default function MealList() {
     isLoading,
     error,
   } = useHttp(
-    // "http://food-order-app-frontend-eight.vercel.app/api/meals",
-    "http://localhost:3000/meals",
+    "https://food-order-app-backend-eight.vercel.app/api/meals",
+    // "http://localhost:3000/api/meals",
     requestConfig,
     []
   );

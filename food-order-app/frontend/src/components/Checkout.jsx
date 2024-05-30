@@ -27,8 +27,8 @@ export default function Checkout() {
     sendRequest,
     clearData,
   } = useHttp(
-    // "http://food-order-app-frontend-eight.vercel.app/api/orders",
-    "http://localhost:3000/orders",
+    "https://food-order-app-backend-eight.vercel.app/api/orders",
+    // "http://localhost:3000/api/orders/",
     requestConfig
   );
 
@@ -50,8 +50,15 @@ export default function Checkout() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const fd = new FormData(event.target);
-    const customerData = Object.fromEntries(fd.entries()); // { email: test@example.com }
+    const formData = new FormData(event.target);
+    // const customerData = Object.fromEntries(formData.entries()); // { email: test@example.com }
+    const customerData = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      street: formData.get("street"),
+      postalCode: formData.get("postalCode"),
+      city: formData.get("city"),
+    };
 
     sendRequest(
       JSON.stringify({
@@ -105,7 +112,7 @@ export default function Checkout() {
         <Input label="E-Mail Address" type="email" id="email" />
         <Input label="Street" type="text" id="street" />
         <div className="control-row">
-          <Input label="Postal Code" type="text" id="postal-code" />
+          <Input label="Postal Code" type="text" id="postalCode" />
           <Input label="City" type="text" id="city" />
         </div>
 
