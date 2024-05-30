@@ -5,11 +5,5 @@
   "routes": [
     { "src": "/api/meals", "dest": "/api/app.js" },
     { "src": "/api/orders", "dest": "/api/app.js" }
-  ],
-  "functions": {
-    "api/app.js": {
-      "memory": 1024,
-      "maxDuration": 30
-    }
-  }
+  ]
 }
