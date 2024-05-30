@@ -18,7 +18,7 @@ export default function Meal({ meal }) {
           // src={`https://food-order-app-backend-eight.vercel.app/public/images/${meal.image}`}
           src={`https://food-order-app-backend-eight.vercel.app/${meal.image}`}
           // src={`http://localhost:3000/${meal.image}`}
-          alt={meal.image}
+          alt={meal.name}
         />
         <div>
           <h3>{meal.name}</h3>
