@@ -27,7 +27,7 @@ export default function Checkout() {
     sendRequest,
     clearData,
   } = useHttp(
-    "https://food-order-app-server-iota.vercel.app/api/orders",
+    "https://food-order-app-backend-ruby.vercel.app/api/orders",
     // "http://localhost:3000/api/orders/",
     requestConfig
   );

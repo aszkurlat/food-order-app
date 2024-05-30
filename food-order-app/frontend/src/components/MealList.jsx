@@ -10,7 +10,7 @@ export default function MealList() {
     isLoading,
     error,
   } = useHttp(
-    "https://food-order-app-server-iota.vercel.app/api/meals",
+    "https://food-order-app-backend-ruby.vercel.app/api/meals",
     // "http://localhost:3000/api/meals",
     requestConfig,
     []
