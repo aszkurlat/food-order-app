@@ -5,13 +5,22 @@ import { Meal, Order } from "./model.js";
 import dotenv from "dotenv";
 import { body, validationResult } from "express-validator";
 import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Configure static file serving
+app.use(
+  "/images",
+  express.static(path.join(__dirname, "..", "public", "images"))
+);
+
 app.use(bodyParser.json());
-app.use("/images", express.static(path.join(process.cwd(), "public/images")));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
