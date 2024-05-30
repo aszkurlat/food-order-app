@@ -25,6 +25,8 @@ mongoose
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000, // Ustaw limit czasu na połączenie
+      socketTimeoutMS: 45000, // Ustaw limit czasu na działanie socketu
     }
   )
   .then(() => {
