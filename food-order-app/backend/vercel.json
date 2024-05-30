@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "name": "node-js",
+  "name": "food-order-backend",
   "builds": [{ "src": "api/app.js", "use": "@vercel/node" }],
   "routes": [
     { "src": "/api/meals", "dest": "/api/app.js" },
-    { "src": "/api/orders", "dest": "/api/app.js" }
+    { "src": "/api/orders", "dest": "/api/app.js" },
+    { "src": "/images/(.*)", "dest": "/api/app.js" }
   ]
 }

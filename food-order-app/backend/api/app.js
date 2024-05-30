@@ -4,13 +4,14 @@ import bodyParser from "body-parser";
 import { Meal, Order } from "./model.js";
 import dotenv from "dotenv";
 import { body, validationResult } from "express-validator";
+import path from "path";
 
 dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use("/images", express.static(path.join(process.cwd(), "public/images")));
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -50,16 +51,6 @@ app.get("/api/meals", async (req, res) => {
     res.status(500).json({ message: "Could not read meals data." });
   }
 });
-// Endpoint GET /api/orders (optional)
-// app.get("/api/orders", async (req, res) => {
-//   try {
-//     const orders = await Order.find();
-//     res.json(orders);
-//   } catch (error) {
-//     console.error("Error reading orders data:", error);
-//     res.status(500).json({ message: "Could not read orders data." });
-//   }
-// });
 
 // Endpoint POST /api/orders
 app.post(
