@@ -4,7 +4,7 @@ import { currencyFormatter } from "../util/formatting.js";
 import Button from "./ui-components/Button.jsx";
 import CartContext from "../store/CartContext.jsx";
 
-export default function MealItem({ meal }) {
+export default function Meal({ meal }) {
   const cartCtx = useContext(CartContext);
 
   function handleAddMealToCart() {
@@ -15,7 +15,7 @@ export default function MealItem({ meal }) {
     <li className="meal">
       <article>
         <img
-          src={`https://food-order-app-backend-eight.vercel.app/images/${meal.image}`}
+          src={`https://food-order-app-backend-eight.vercel.app/${meal.image}`}
           // src={`http://localhost:3000/${meal.image}`}
           alt={meal.name}
         />
