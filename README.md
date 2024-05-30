@@ -4,7 +4,7 @@
 This project is a web application that allows users to order food online. The application requires both a backend and a frontend to run. Follow the instructions below to set up and start the project.
 
 ## See demo page:
-[Link to demo page](https://food-order-app-react.pages.dev/)
+[Link to demo page](https://food-order-app-frontend-woad.vercel.app/)
 
 ## Backend Setup
 
