@@ -1,20 +1,15 @@
 {
-  {
-    "version": 2,
-    "name": "node-js",
-    "builds": [
-      { "src": "api/app.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-      { "src": "/api/meals", "dest": "/api/app.js" },
-      { "src": "/api/orders", "dest": "/api/app.js" }
-    ],
-    "functions": {
-      "api/app.js": {
-        "memory": 1024,
-        "maxDuration": 30
-      }
+  "version": 2,
+  "name": "node-js",
+  "builds": [{ "src": "api/app.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/api/meals", "dest": "/api/app.js" },
+    { "src": "/api/orders", "dest": "/api/app.js" }
+  ],
+  "functions": {
+    "api/app.js": {
+      "memory": 1024,
+      "maxDuration": 30
     }
   }
-  
 }
